@@ -160,7 +160,7 @@ Exercise
 1. Take the code we gave you for `check_whitespace.c`. Compile the program
 and run `valgrind` on it to find any leaks it may have (hint: it has at
 least one). 
-2. In `Leaks.md` describe why the memory errors happen, and how to fix them. 
+2. In `leak_report.md` describe why the memory errors happen, and how to fix them. 
 3. Actually fix the code.
 4. Commit, push, etc.
 
