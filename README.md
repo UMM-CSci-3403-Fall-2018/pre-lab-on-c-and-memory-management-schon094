@@ -2,11 +2,11 @@
 
 Pre-lab to get started on compiling and running C programs and valgrind
 
--   [Background](#Background)
-    -   [Checking vs. Exploration](#Checking_vs_Exploration)
-    -   [Compiling and running a C program](#Compiling_and_running_a_C_progra)
-    -   [Using valgrind to find memory leaks](#Using_valgrind_to_find_memory_le)
--   [Exercise](#Exercise)
+-   [Background](#background)
+    -   [Checking vs. Exploration](#checking-vs-exploration)
+    -   [Compiling and running a C program](#compiling-and-running-a-c-program)
+    -   [Using valgrind to find memory leaks](#using-valgrind-to-find-memory-leaks)
+-   [Exercise](#exercise)
 
 Background
 ----------------------------------------
@@ -158,10 +158,3 @@ least one).
 2. In `leak_report.md` describe why the memory errors happen, and how to fix them. 
 3. Actually fix the code.
 4. Commit, push, etc.
-
-```
-Peter Dolan - 16 Sep 2015
-KK Lamberty - 12 Sep 2012 
-Nic McPhee - 12 Sep 2012 
-Vincent Borchardt - 16 Aug 2012
-```
