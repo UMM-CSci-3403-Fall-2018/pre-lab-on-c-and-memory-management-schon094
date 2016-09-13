@@ -16,10 +16,6 @@ which includes several C programming exercises with an emphasis on arrays, point
 and memory management. The Internet is chock full of C tutorials, etc.;
 some are listed on the
 [CSci3403 Resources Page](https://github.umn.edu/UMM-CSci3403-F15/Resources/wiki), but there are no doubt zillions of good resources out there we've never heard of.
-There are also several examples of C that are written to deliberately
-illustrate some relevant concepts in `~mcphee/pub/CSci3401/C_examples`.
-We'll be happy to go over any of these in class or lab if you have
-questions, so feel free to ask.
 
 ### Checking vs. Exploration
 
