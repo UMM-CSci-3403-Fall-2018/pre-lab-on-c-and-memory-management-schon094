@@ -2,11 +2,11 @@
 
 Pre-lab to get started on compiling and running C programs and valgrind
 
--   [Background](#Background)
-    -   [Checking vs. Exploration](#Checking_vs_Exploration)
-    -   [Compiling and running a C program](#Compiling_and_running_a_C_progra)
-    -   [Using valgrind to find memory leaks](#Using_valgrind_to_find_memory_le)
--   [Exercise](#Exercise)
+-   [Background](#background)
+    -   [Checking vs. Exploration](#checking-vs-Exploration)
+    -   [Compiling and running a C program](#compiling-and-running-a-c-progra)
+    -   [Using valgrind to find memory leaks](#using-valgrind-to-find-memory-leaks)
+-   [Exercise](#exercise)
 
 Background
 ----------------------------------------
