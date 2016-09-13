@@ -3,8 +3,8 @@
 Pre-lab to get started on compiling and running C programs and valgrind
 
 -   [Background](#background)
-    -   [Checking vs. Exploration](#checking-vs-Exploration)
-    -   [Compiling and running a C program](#compiling-and-running-a-c-progra)
+    -   [Checking vs. Exploration](#checking-vs-exploration)
+    -   [Compiling and running a C program](#compiling-and-running-a-c-program)
     -   [Using valgrind to find memory leaks](#using-valgrind-to-find-memory-leaks)
 -   [Exercise](#exercise)
 
