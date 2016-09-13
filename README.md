@@ -42,10 +42,9 @@ your new knowledge back to the project at hand.
 
 ### Compiling and running a C program
 
-In the exercise below you'll need to edit, (re)compile, and run a C
-program that you can find at
-`~mcphee/pub/CSci3401/Lab3_prelab/check_whitespace.c`. Assuming you've
-copied this to a directory in your space, you can compile this using the
+In the exercise below you'll need to edit, (re)compile, and run the C
+program `check_whitespace.c` that is provided in this repository. 
+Assuming you're in the project directory, you can compile this using the
 command
 
 ```bash
@@ -157,7 +156,7 @@ allocated.
 Exercise
 ------------------------------------
 
-1. Take the code we gave you for `check_whitespace.c`. Compile the program
+1. Compile the program `check_whitespace.c`
 and run `valgrind` on it to find any leaks it may have (hint: it has at
 least one). 
 2. In `leak_report.md` describe why the memory errors happen, and how to fix them. 
