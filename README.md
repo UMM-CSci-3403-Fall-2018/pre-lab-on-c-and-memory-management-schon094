@@ -174,11 +174,10 @@ used again, and that's where you'd insert the necessary `free()` call.
 Exercise
 ------------------------------------
 
-   * [ ] Compile the program `check_whitespace.c`
+- [ ] Compile the program `check_whitespace.c`
 and run `valgrind` on it to find any leaks it may have (hint: it has at
 least one). 
-   * [ ] In `leak_report.md` describe why the memory errors happen, and how to fix them. 
-   * [ ] Actually fix the code.
-   * [ ] Commit, push, etc.
-   * [ ] Submit the URL for your repository as instructed elsewhere
-
+- [ ] In `leak_report.md` describe why the memory errors happen, and how to fix them. 
+- [ ] Actually fix the code.
+- [ ] Commit, push, etc.
+- [ ] Submit the URL for your repository as instructed elsewhere
