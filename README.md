@@ -11,9 +11,9 @@ Pre-lab to get started on compiling and running C programs and valgrind
 Background
 ----------------------------------------
 
-This pre-lab is for the _C and memory management_ labs, parts 1 and 2, 
-which includes several C programming exercises with an emphasis on arrays, pointers,
-and memory management. The Internet is chock full of C tutorials, etc.;
+This pre-lab is for the next several labs which comprise a number of 
+C programming exercises with an emphasis on arrays, pointers, memory management, and system calls. 
+The Internet is chock full of C tutorials, etc.;
 some are listed on the
 [CSci3403 Resources Page](https://github.umn.edu/UMM-CSci3403-F15/Resources/wiki), but there are no doubt zillions of good resources out there we've never heard of.
 
@@ -30,7 +30,8 @@ it's important to recognize that the stuff we're writing when we explore
 is often pretty crappy (because we don't know what we're doing yet). As
 a result one often does the exploring off to the side, with the
 intention of throwing it away. I bring all this up because I suspect
-there will be a fair amount of exploring that goes on during this lab.
+there will be a fair amount of exploring that goes on during this 
+pre-lab and the following labs.
 Try to be intentional and honest about that. Step off to the side and
 try a little exploratory code to figure out if you've got an idea worked
 out correctly. Then throw away that "quick and dirty" code, and bring
@@ -53,8 +54,9 @@ people use on Linux boxes these days. The meaning of the flags:
 -   `-g` tells `gcc` to include debugging information in the generated
     executable. This is allows, for example, programs like `valgrind`
     (described below) to list line numbers where it thinks there are
-    problems. Without `-g` it will identify functions, but not have line
-    numbers.
+    problems. Without `-g` Valgrind (and other debugging tools) will 
+    be able to specify the name of functions where there are problems, 
+    but not give you line numbers.
 -   `-Wall` (it's a capital 'W') is short for "Warnings all" and turns
     on *all* the warnings that `gcc` supports. This is a Very Good Idea
     because there are a ton of crazy things that C will try to
@@ -149,14 +151,34 @@ trace), etc. Note that this tells you where the lost bytes were
 be *freed*, as that's going to depend on how they're used after they're
 allocated.
 
+There are two types of memory leaks, one of which is frankly easier to
+sort out than the other.
+
+The easy ones are were function `f()` allocates _local_ memory (memory 
+no one but `f()` uses) and doesn't free it up before it exits. The
+solution to this is typically just to free up the memory before `f()`
+exits.
+
+The trickier ones are where `f()` allocates memory that it _returns_
+to whoever called it, say a function `g()`. `f()` _can't_ free that
+memory before it exits, because that would invalidate the memory
+being returned to `g()`. This makes it _`g()`'s_ responsibility to
+free up the memory in question after _it's_ done with it. If `g()` in
+returns that memory back up to whoever called `g()` (say `h()`), 
+then `g()` also can't free it and it becomes `h()`'s responsibility.
+This can push the responsibility all the way to "top level" code like
+the `main()` method or even testing code. So carefully trace the uses
+until you get to someplace where you know the memory will never be
+used again, and that's where you'd insert the necessary `free()` call.
+
 Exercise
 ------------------------------------
 
-1. Compile the program `check_whitespace.c`
+1. [ ] Compile the program `check_whitespace.c`
 and run `valgrind` on it to find any leaks it may have (hint: it has at
 least one). 
-2. In `leak_report.md` describe why the memory errors happen, and how to fix them. 
-3. Actually fix the code.
-4. Commit, push, etc.
-5. Submit the URL for your repository on canvas
+2. [ ] In `leak_report.md` describe why the memory errors happen, and how to fix them. 
+3. [ ] Actually fix the code.
+4. [ ] Commit, push, etc.
+5. [ ] Submit the URL for your repository as instructed elsewhere
 
