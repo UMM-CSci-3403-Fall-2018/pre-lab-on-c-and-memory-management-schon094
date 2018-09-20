@@ -45,7 +45,7 @@ char* strip(char* str) {
   }
   // Place the null terminator at the end of the result string.
   result[i-first_non_space] = '\0';
-
+ // free(result);
   return result;
 }
 
@@ -90,6 +90,5 @@ int main() {
       printf("The string '%s' is NOT clean.\n", strings[i]);
     }
   }
-
   return 0;
 }
